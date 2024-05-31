@@ -32,7 +32,7 @@ class EventManager:
         os.chdir(self.init.user_music_path) #mudando o diretório para a pasta de músicas que o usuário escolheu na caixa de diálogos
         #Aqui há uma definição de um algoritmo de para pegar os nomes das músicas do usuário e colocar dentro do banco de dados de músicas. OBS: os.listdir() retorna um vetor de quantos diretórios tem na pasta 
         for i in range(0, len(os.listdir()), 1):
-            with open(f'{current_dir}\\music_data.txt', 'a') as file:
+            with open(f'{current_dir}\\database\\music_data.txt', 'a') as file:
                 file.write(f'{os.listdir()[i]}\n') #Como os.listdir() retorna um vetor, [i] para pegar cada posição em formato de string e pôr em music_data.txt com uma quebra de linha   
     #função para iniciar e resetar a música
     def start_reset_btn_press(self):
