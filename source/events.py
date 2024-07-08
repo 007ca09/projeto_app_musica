@@ -14,7 +14,7 @@ class EventManager:
     
     #função para salvar última alteração feita pelo usuário
     def save_last_data(self, path, content_data):
-        with open(f'{os.getcwd()}\\database\\{path}', 'w') as file: #escrevendo no banco de dados
+        with open(f'database\\{path}', 'w') as file: #escrevendo no banco de dados
             file.write(str(content_data))
     #função para poder mundar a música
     def change_music(self):
